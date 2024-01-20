@@ -12,7 +12,9 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@aurodesignsystem/auro-button": "^7.2.3",
+		"@alaskaairux/icons": "^4.32.0",
+		"@aurodesignsystem/auro-alert": "^2.1.0",
+		"@aurodesignsystem/auro-checkbox": "^2.1.0",
 		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
