@@ -59,6 +59,10 @@
     // /Users/dalesande/src/personal/sveltekit-auro/node_modules/dayjs/esm/index.js:1
     // import * as C from './constant';
     import('@aurodesignsystem/auro-pane');
+
+    import('@aurodesignsystem/auro-popover');
+
+    import('@aurodesignsystem/auro-select');
 	});
 </script>
 
