@@ -22,14 +22,13 @@
   import('@aurodesignsystem/auro-drawer');
   import('@aurodesignsystem/auro-flight');
   import('@aurodesignsystem/auro-loader');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
-  // import('@aurodesignsystem/auro-');
+  import('@aurodesignsystem/auro-lockup');
+  import('@aurodesignsystem/auro-nav');
+  import('@aurodesignsystem/auro-radio');
+  import('@aurodesignsystem/auro-skeleton');
+  import('@aurodesignsystem/auro-sidenav');
+  import('@aurodesignsystem/auro-table');
+  import('@aurodesignsystem/auro-toast');
 
 	onMount(() => {
 		// this component relies on an old version of lit that references `window` directly
@@ -54,6 +53,12 @@
 
     // This will be the last one to try and make work
     import('@aurodesignsystem/auro-datepicker');
+
+    // (node:29857) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+    // (Use `node --trace-warnings ...` to show where the warning was created)
+    // /Users/dalesande/src/personal/sveltekit-auro/node_modules/dayjs/esm/index.js:1
+    // import * as C from './constant';
+    import('@aurodesignsystem/auro-pane');
 	});
 </script>
 
@@ -84,6 +89,13 @@
 
   <div style="width: 50%;">
     <auro-badge>hello world</auro-badge>
+
+    <auro-radio-group>
+      <span slot="legend">Form label goes here</span>
+      <auro-radio id="radio28" label="Yes" name="radioDemo" value="yes"></auro-radio>
+      <auro-radio id="radio29" label="No" name="radioDemo" value="no"></auro-radio>
+      <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
+    </auro-radio-group>
 
     <auro-background bg="url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/ad2) center center/cover no-repeat">
       <div style="color: var(--ds-color-text-primary-inverse); display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -195,6 +207,10 @@
       <img src="https://picsum.photos/200?random=99" alt="Random insert 99">
     </auro-carousel>
 
+    <auro-pane date="2020-09-20"></auro-pane>
+    <auro-pane date="2020-09-21" selected></auro-pane>
+    <auro-pane date="2020-09-22" disabled></auro-pane>
+
     <auro-checkbox-group>
       <span slot="legend">Form label goes here</span>
       <auro-checkbox value="checkbox option" name="example1" id="checkbox-basic1">Checkbox option</auro-checkbox>
@@ -202,6 +218,10 @@
       <auro-checkbox value="checkbox option" name="example3" id="checkbox-basic3">Checkbox option</auro-checkbox>
       <auro-checkbox value="checkbox option" name="example4" id="checkbox-basic4">Checkbox option</auro-checkbox>
     </auro-checkbox-group>
+
+    <auro-toast style="display: block; margin: 0.5rem 0;"id="defaultToast">
+      Default notification with no error type
+    </auro-toast>
 
     <auro-datepicker>
       <span slot="fromLabel">Choose a date</span>
@@ -239,9 +259,42 @@
         <auro-menuoption static nomatch>No matching option</auro-menuoption>
       </auro-menu>
     </auro-combobox>
+
+    <auro-sidenav>
+      <span slot="heading">Pet travel policies</span>
+      <auro-sidenavitem href="/content/travel-info/pets">Pet travel overview</auro-sidenavitem>
+      <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-with-pets/pets-in-cabin">Pets in cabin</auro-sidenavitem>
+      <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-with-pets/pets-in-baggage-compartment">Pets in baggage compartment</auro-sidenavitem>
+      <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-hawaii">Traveling to Hawaii</auro-sidenavitem>
+      <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-international" target="_blank">International travel with pets</auro-sidenavitem>
+      <auro-sidenavsection>
+        <span slot="trigger">FAQ</span>
+        <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-with-pets/banfield-qa#safe-to-fly">Is it safe to fly with my pet?</auro-sidenavitem>
+        <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-with-pets/banfield-qa#certain-breeds-prohibited">Why are certain breeds prohibited from flying in the cargo compartment?</auro-sidenavitem>
+        <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-with-pets/banfield-qa#dog-info" target="_blank">Dogs</auro-sidenavitem>
+        <auro-sidenavitem href="/content/travel-info/policies/pets-traveling-with-pets/banfield-qa#cat-info" target="_blank">Cats</auro-sidenavitem>
+      </auro-sidenavsection>
+    </auro-sidenav>
+
+    <!-- Svelte does not like data in the HTML. But the imported element data works.  -->
+    <!-- <auro-table
+      nowrap
+      columnHeaders='["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]'
+      componentData='[
+        {"": "Dance class", "Monday": "5:00pm","Wednesday": "5:00pm" },
+        {"": "Night classes", "Thursday": "7:00pm","Friday": "7:00pm" },
+        {"": "Team meeting", "Wednesday": "10:00am" },
+        {"": "Morning workout", "Monday": "8:00am", "Tuesday": "8:00am", "Wednesday": "8:00am", "Thursday": "8:00am", "Friday": "8:00am" }
+      ]'>
+    </auro-table> -->
   </div>
 
   <div>
+
+    <auro-skeleton shape="circle" style="width: 40px; height: 40px"></auro-skeleton>
+    <auro-skeleton shape="oval" style="width: 200px; height: 100px;"></auro-skeleton>
+    <auro-skeleton shape="rectangle" style="width: 400px; height: 300px"></auro-skeleton>
+
     <auro-flight
       flights='["AS 374"]'
       duration="120"
@@ -255,6 +308,19 @@
     </auro-flight>
 
     <auro-button>hello world</auro-button>
+
+    <auro-lockup>
+      <span slot="title">Place title text here</span>
+      <span slot="subtitle">Place subtitle text here</span>
+    </auro-lockup>
+
+    <auro-nav>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Home</auro-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 2</auro-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 3</auro-breadcrumb>
+      <auro-breadcrumb href="http://auro.alaskaair.com/components/auro/nav">Level 4</auro-breadcrumb>
+      <auro-breadcrumb>Current</auro-breadcrumb>
+    </auro-nav>
 
     <auro-banner billboard>
       <picture slot="displayImage">

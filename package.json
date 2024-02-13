@@ -48,6 +48,15 @@
 		"@aurodesignsystem/auro-icon": "^4.2.5",
 		"@aurodesignsystem/auro-input": "^2.17.4",
 		"@aurodesignsystem/auro-loader": "^2.0.4",
-		"@aurodesignsystem/auro-menu": "^3.11.0"
+		"@aurodesignsystem/auro-lockup": "^3.0.4",
+		"@aurodesignsystem/auro-menu": "^3.11.0",
+		"@aurodesignsystem/auro-nav": "^1.2.4",
+		"@aurodesignsystem/auro-pane": "^2.1.5",
+		"@aurodesignsystem/auro-radio": "^2.2.1",
+		"@aurodesignsystem/auro-sidenav": "^1.1.2",
+		"@aurodesignsystem/auro-skeleton": "^2.1.3",
+		"@aurodesignsystem/auro-table": "^2.1.3",
+		"@aurodesignsystem/auro-toast": "^1.1.3",
+		"focus-visible": "^5.2.0"
 	}
 }
