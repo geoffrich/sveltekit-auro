@@ -10,16 +10,16 @@
   import('@aurodesignsystem/auro-accordion');
   import('@aurodesignsystem/auro-alert');
   import('@aurodesignsystem/auro-avatar');
-  import('@aurodesignsystem/auro-background');
+  // import('@aurodesignsystem/auro-background');
   import('@aurodesignsystem/auro-header');
-  import('@aurodesignsystem/auro-backtotop');
-  import('@aurodesignsystem/auro-banner');
-  import('@aurodesignsystem/auro-card');
-  import('@aurodesignsystem/auro-carousel');
-  import('@aurodesignsystem/auro-checkbox');
+  // import('@aurodesignsystem/auro-backtotop');
+  // import('@aurodesignsystem/auro-banner');
+  // import('@aurodesignsystem/auro-card');
+  // import('@aurodesignsystem/auro-carousel');
+  // import('@aurodesignsystem/auro-checkbox');
   import('@aurodesignsystem/auro-datetime');
-  import('@aurodesignsystem/auro-dialog');
-  import('@aurodesignsystem/auro-drawer');
+  // import('@aurodesignsystem/auro-dialog');
+  // import('@aurodesignsystem/auro-drawer');
   import('@aurodesignsystem/auro-flight');
   import('@aurodesignsystem/auro-loader');
   import('@aurodesignsystem/auro-lockup');
@@ -27,8 +27,8 @@
   import('@aurodesignsystem/auro-radio');
   import('@aurodesignsystem/auro-skeleton');
   import('@aurodesignsystem/auro-sidenav');
-  import('@aurodesignsystem/auro-table');
-  import('@aurodesignsystem/auro-toast');
+  // import('@aurodesignsystem/auro-table');
+  // import('@aurodesignsystem/auro-toast');
 
 	onMount(() => {
 		// this component relies on an old version of lit that references `window` directly
@@ -42,14 +42,14 @@
     // CommonJS modules can always be imported via the default export, for example using:
     // import pkg from '@popperjs/core/dist/esm/popper.js';
     // const { createPopper } = pkg;
-    import('@aurodesignsystem/auro-dropdown');
+    // import('@aurodesignsystem/auro-dropdown');
 
     // dependency on dropdown
     import('@aurodesignsystem/auro-combobox');
 
     // ReferenceError: window is not defined
     // /mark.js/dist/mark.min.js
-    import('@aurodesignsystem/auro-menu');
+    // import('@aurodesignsystem/auro-menu');
 
     // This will be the last one to try and make work
     import('@aurodesignsystem/auro-datepicker');
@@ -58,11 +58,11 @@
     // (Use `node --trace-warnings ...` to show where the warning was created)
     // /Users/dalesande/src/personal/sveltekit-auro/node_modules/dayjs/esm/index.js:1
     // import * as C from './constant';
-    import('@aurodesignsystem/auro-pane');
+    // import('@aurodesignsystem/auro-pane');
 
-    import('@aurodesignsystem/auro-popover');
+    // import('@aurodesignsystem/auro-popover');
 
-    import('@aurodesignsystem/auro-select');
+    // import('@aurodesignsystem/auro-select');
 	});
 </script>
 
@@ -101,14 +101,14 @@
       <auro-radio id="radio30" label="Maybe" name="radioDemo" value="maybe"></auro-radio>
     </auro-radio-group>
 
-    <auro-background bg="url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/ad2) center center/cover no-repeat">
+    <!-- <auro-background bg="url(https://sitecore-test-single-westus2.azurewebsites.net/-/media/Images/pages/examples/ad2) center center/cover no-repeat">
       <div style="color: var(--ds-color-text-primary-inverse); display: flex; flex-direction: column; align-items: center; justify-content: center;">
         <auro-header level="2" display="600">View all destinations</auro-header>
         <auro-hyperlink cta href="#">See where we fly</auro-hyperlink>
       </div>
-    </auro-background>
+    </auro-background> -->
 
-    <auro-carousel label="Images" scrolldistance="600">
+    <!-- <auro-carousel label="Images" scrolldistance="600">
       <img src="https://picsum.photos/200?random=0" alt="Random insert 0">
       <img src="https://picsum.photos/200?random=1" alt="Random insert 1">
       <img src="https://picsum.photos/200?random=2" alt="Random insert 2">
@@ -209,23 +209,23 @@
       <img src="https://picsum.photos/200?random=97" alt="Random insert 97">
       <img src="https://picsum.photos/200?random=98" alt="Random insert 98">
       <img src="https://picsum.photos/200?random=99" alt="Random insert 99">
-    </auro-carousel>
+    </auro-carousel> -->
 
     <auro-pane date="2020-09-20"></auro-pane>
     <auro-pane date="2020-09-21" selected></auro-pane>
     <auro-pane date="2020-09-22" disabled></auro-pane>
 
-    <auro-checkbox-group>
+    <!-- <auro-checkbox-group>
       <span slot="legend">Form label goes here</span>
       <auro-checkbox value="checkbox option" name="example1" id="checkbox-basic1">Checkbox option</auro-checkbox>
       <auro-checkbox value="checkbox option" name="example2" id="checkbox-basic2" checked>Checkbox option</auro-checkbox>
       <auro-checkbox value="checkbox option" name="example3" id="checkbox-basic3">Checkbox option</auro-checkbox>
       <auro-checkbox value="checkbox option" name="example4" id="checkbox-basic4">Checkbox option</auro-checkbox>
-    </auro-checkbox-group>
+    </auro-checkbox-group> -->
 
-    <auro-toast style="display: block; margin: 0.5rem 0;"id="defaultToast">
+    <!-- <auro-toast style="display: block; margin: 0.5rem 0;"id="defaultToast">
       Default notification with no error type
-    </auro-toast>
+    </auro-toast> -->
 
     <auro-datepicker>
       <span slot="fromLabel">Choose a date</span>
@@ -326,7 +326,7 @@
       <auro-breadcrumb>Current</auro-breadcrumb>
     </auro-nav>
 
-    <auro-banner billboard>
+    <!-- <auro-banner billboard>
       <picture slot="displayImage">
         <source srcset="https://picsum.photos/id/430/1124/800" media="(min-width: 1024px)">
         <source srcset="https://picsum.photos/id/430/1124/1000" media="(min-width: 768px)">
@@ -351,16 +351,16 @@
         target="_blank">
         More info
       </auro-hyperlink>
-    </auro-banner>
+    </auro-banner> -->
 
     <auro-loader ringworm></auro-loader>
     <auro-loader orbit></auro-loader>
     <auro-loader pulse></auro-loader>
     <auro-loader laser></auro-loader>
 
-    <auro-backtotop>Back to top</auro-backtotop>
+    <!-- <auro-backtotop>Back to top</auro-backtotop> -->
 
-    <auro-card>
+    <!-- <auro-card>
       <span slot="title">
         Pri dicat graece abhorreant
       </span>
@@ -381,7 +381,7 @@
       <p slot="disclaimer">
         * Errem tempor eligendi cu eos
       </p>
-    </auro-card>
+    </auro-card> -->
 
     <p id="foo">The element is labelled by content external to the element.</p>
     <auro-dropdown id="commonAdvanced" aria-labelledby="foo" bordered rounded inset chevron>
@@ -402,7 +402,7 @@
   </div>
 </div>
 
-<auro-dialog id="defaultDialog">
+<!-- <auro-dialog id="defaultDialog">
   <span slot="header">Default Dialog</span>
   <div slot="content">
     <p>When traveling on Alaska Airlines flights, Alaska Airlines checked baggage fees may apply. See <auro-hyperlink href="https://www.alaskaair.com/bagrules" target="_blank">alaskaair.com/bagrules</auro-hyperlink> for our rules. For itineraries that include other airlines, their checked baggage fees may apply, as displayed on their websites.</p>
@@ -418,9 +418,9 @@
   <div slot="footer" class="auro_containedButtons">
     <auro-button secondary onClick="toggleInterruption('#defaultDialog')">Close</auro-button>
   </div>
-</auro-dialog>
+</auro-dialog> -->
 
-<auro-drawer id="defaultDrawer">
+<!-- <auro-drawer id="defaultDrawer">
   <span slot="header">Default Drawer</span>
   <div slot="content">
     <p>When traveling on Alaska Airlines flights, Alaska Airlines checked baggage fees may apply. See <auro-hyperlink href="https://www.alaskaair.com/bagrules" target="_blank">alaskaair.com/bagrules</auro-hyperlink> for our rules. For itineraries that include other airlines, their checked baggage fees may apply, as displayed on their websites.</p>
@@ -436,4 +436,4 @@
   <div slot="footer" class="auro_containedButtons">
     <auro-button secondary onClick="toggleInterruption('#defaultDialog')">Close</auro-button>
   </div>
-</auro-drawer>
+</auro-drawer> -->
