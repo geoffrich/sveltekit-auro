@@ -10,16 +10,16 @@
   import('@aurodesignsystem/auro-accordion');
   import('@aurodesignsystem/auro-alert');
   import('@aurodesignsystem/auro-avatar');
-  // import('@aurodesignsystem/auro-background');
+  import('@aurodesignsystem/auro-background');
   import('@aurodesignsystem/auro-header');
-  // import('@aurodesignsystem/auro-backtotop');
-  // import('@aurodesignsystem/auro-banner');
-  // import('@aurodesignsystem/auro-card');
-  // import('@aurodesignsystem/auro-carousel');
-  // import('@aurodesignsystem/auro-checkbox');
+  import('@aurodesignsystem/auro-backtotop');
+  import('@aurodesignsystem/auro-banner');
+  import('@aurodesignsystem/auro-card');
+  import('@aurodesignsystem/auro-carousel');
+  import('@aurodesignsystem/auro-checkbox');
   import('@aurodesignsystem/auro-datetime');
-  // import('@aurodesignsystem/auro-dialog');
-  // import('@aurodesignsystem/auro-drawer');
+  import('@aurodesignsystem/auro-dialog');
+  import('@aurodesignsystem/auro-drawer');
   import('@aurodesignsystem/auro-flight');
   import('@aurodesignsystem/auro-loader');
   import('@aurodesignsystem/auro-lockup');
@@ -27,8 +27,9 @@
   import('@aurodesignsystem/auro-radio');
   import('@aurodesignsystem/auro-skeleton');
   import('@aurodesignsystem/auro-sidenav');
-  // import('@aurodesignsystem/auro-table');
-  // import('@aurodesignsystem/auro-toast');
+  import('@aurodesignsystem/auro-table');
+  import('@aurodesignsystem/auro-toast');
+  import('@aurodesignsystem/auro-popover');
 
 	onMount(() => {
 		// this component relies on an old version of lit that references `window` directly
@@ -42,14 +43,14 @@
     // CommonJS modules can always be imported via the default export, for example using:
     // import pkg from '@popperjs/core/dist/esm/popper.js';
     // const { createPopper } = pkg;
-    // import('@aurodesignsystem/auro-dropdown');
+    import('@aurodesignsystem/auro-dropdown');
 
     // dependency on dropdown
     import('@aurodesignsystem/auro-combobox');
 
     // ReferenceError: window is not defined
     // /mark.js/dist/mark.min.js
-    // import('@aurodesignsystem/auro-menu');
+    import('@aurodesignsystem/auro-menu');
 
     // This will be the last one to try and make work
     import('@aurodesignsystem/auro-datepicker');
@@ -58,11 +59,9 @@
     // (Use `node --trace-warnings ...` to show where the warning was created)
     // /Users/dalesande/src/personal/sveltekit-auro/node_modules/dayjs/esm/index.js:1
     // import * as C from './constant';
-    // import('@aurodesignsystem/auro-pane');
+    import('@aurodesignsystem/auro-pane');
 
-    // import('@aurodesignsystem/auro-popover');
-
-    // import('@aurodesignsystem/auro-select');
+    import('@aurodesignsystem/auro-select');
 	});
 </script>
 
@@ -247,6 +246,16 @@
     <auro-avatar type="sm" code="mke"></auro-avatar>
 
     <auro-header>Hello World!</auro-header>
+
+    <auro-popover>
+      Top popover content!
+      <auro-button slot="trigger">Popover Test</auro-button>
+    </auro-popover>
+    <!-- Using the placement=bottom attribute -->
+    <auro-popover placement="bottom">
+      Popover content!
+      <auro-button secondary slot="trigger">Popover Test</auro-button>
+    </auro-popover>
 
     <auro-input bordered></auro-input>
 
